@@ -1,0 +1,265 @@
+PYTHON PROGRAMMING INTRODUCTION
+Python is a high level, interpreted and general purpose programming language.
+-> it is designed to be easy to read, write and powerful enough to build several apps in different domains - can build almost anything
+-> written in pseudo code and is easily readable.
+->compared to compiled languages that are written in machine code or binary code and are not executed line by line.
+
+WHY PYTHON
+1. Simple and readable syntax
+2. Less code, more power - what might take a languange like Java, C++ 10 lines to execute, Python may exeecute the same program in 2 lines.
+3. Interpreted language **doesn't need to compile**
+   -> the code runs just by running the python files directly.
+4. Massive community and libraries
+5. Cross platform -> can run on any OS or system - Windows, Linux, MacOS
+
+Python Applications
+1. Web Development
+2. Data Science and Machine Learning
+3. Cybersecurity
+4. Game development
+5. Robotics
+
+CREATING A PYTHON FILE
+-> all python files have the .py extension
+-> think of it like a box used to store data in programming
+-> Simplest way to store data in programming
+e.g
+x = 10
+x --> variable
+10 --> value
+
+N/B
+variables are given a name of your choice but they have to follow variable naming rules
+xyz = 19
+
+Variables naming rules/conventions
+1. Variables can only contain letters, numbers and underscores
+   e.g full_name1 **valid variable\*
+   !name **invalid\*
+
+2. Can only start with a letter or an underscore --> Can't start with a number
+   e.g \_name **valid\*
+   name **valid*
+   23name \*\*invalid*
+
+3. Variable names are case sensitive
+   -> name, Name, NAME are all different variables
+   -> x and X are different variables
+
+4. Variable names can't be Python keywords - you can't assign variables reserved keywordds
+
+**It is good practise to give variables meaningful names**
+email = "email.com"
+x = "email.com"
+
+5. They also can't have spaces
+   i.e full name **invalid\*
+   fullname **valid*
+   full_name \*\*valid*
+
+OUTPUTING VALUES
+print() \*_function used to output values_
+
+-DATA TYPES
+-> a data type tells python what kind of value something is and what operations can be done with it.
+-> every variable has a type depending on the value it holds.
+
+*Python data types*
+-numeric data types
+ they hold numeric values
+Categorized into two:
+ a. intergers => whole numbers e.g 20, 30, 12
+   **denoted as int**
+ b. float => floating point numbers or decimal numbers e.g 6.7, 77.4, 4.0999
+  **denoted as float**
+  
+-textual data types
+ data that is in text form(text-based data)
+ -denoted as str
+ => string - a sequence of characters -letters, numbers, symbols, spaces etc 
+ => are encolosed in quotations ("", '')
+ **enables python to work with text*
+
+-boolean data types
+-> data types used to represent truth values
+-> (True, False)
+-denoted as bool
+is_adult = True
+
+1. int
+2. float
+3. str
+4. bool
+
+---> to identify any type of data in python we use type() function
+---> 
+
+=>*TAKING USER INPUT**
+getting data from the program 
+in python we use input()
+i.e user_input = input("Enter anything....")
+
+N/B **any data coming from user input will always be a string.**
+
+print()-output
+type()- checks data type
+input()- taking user input from the user from the terminal.
+
+yellow error - undefined
+red error - syntax erroe
+
+python is strict on indentation rules meaning no unexpected indentation and spaces
+it throws a syntax error.
+
+REF POINT=> w3schools.com, geeks for geeks.
+
+**Comments & multiline strings
+--> comment code is not executed
+---> we use #
+
+Multiline string is a string that traverses more than one line 
+--> we use triple ('')single quotes or ("") double quotes.
+
+TYPE CASTING
+--> converting the type of a variable to another
+i.e a string to a float
+
+#bool conversion
+1 => True
+0 => False
+
+
+String operations
+=> how you can manipulate string data types.
+
+1. Concatenation -> combining 2 or more atrings to one
+ *we use (+)
+
+2. Indexing ->each character in a variable is given an index(helps access the characters)
+ --> python starts counting from 0
+ --> spaces are counted are characters
+ --> to determine the index of character we use [] ->square brackets 
+ --> can work in the reverse by starting from -1
+
+3. Length -> determining how many characters are in a string. (len()) function
+4. Slicing -> used to extract a piece of a string from the full string
+ --> has a starting point and an ending point
+ --> uses indexing
+5. Casing -> changing the case (uppercase)/(lowercase)
+
+TASK
+1. .strip() -> removes whitespaces from both sides.
+2. .lstrip() -> removes whitespaces from the left side.
+3. .rstrip() -> removes whitespaces from the right side.
+4. .title() -> capitalize the first character of a string.
+5. .index() -> returns the index of the first occurrence of the passed character of a string.
+6. .find() -> similar to index(returns the index of a character in a string).
+7. .count() -> checks the number of times a character appears in a string.
+8. .endswith() & .startswith() -> checks whether the string starts with or ends with the character passed and returns \true or false\
+9. .isupper() & .islower() -> checks whether a string is in uppercase or lowercase \returns boolean\
+10. .split() -> separates a string at the given separator and returns a list.
+11. .join() -> join iterable items.
+
+12. .formatted string f('') -> enables you to include variable names in string data
+13. .replace ->replaces a character in a string with another character.
+
+slide 27 task
+
+INTERGER & FLOAT OPERATIONS
+1.Addition -<+>
+2.Subtraction -<->
+3.Division -</>
+4.Multiplication -<*>
+
+=> exponentiation (**)
+=> floor division (//)
+=> modulus (%)
+ 
+task: slide 30
+
+DATA STRUCTURES / DATA COLLECTIONS
+-> to store multiple data items together in a single memory location or variable.
+
+Types of data structures/collections.
+1.List 
+2.Tuples
+3.Dictionary
+4.Sets
+
+*Lists*
+ordered and mutable collection of items of different data types.
+can store items of any type
+denoted by square brackets[]
+ fruits = ["mango", "apple", "banana"]
+
+Properties of lists
+=>they are ordered - uses index to access/order items 
+=>can store items of any data type 
+   i.e items = ["Ken", 1, 2, 4.654, True]
+=> can store multiple items
+=> are mutable -> the value of items in the list can be changed.  
+=> values in a list are accessed using index.
+=> values in a list are separated by a comma.
+
+**list can contain any data type
+**list can contain another list
+
+
+LIST METHODS
+-Adding items to a list
+**append() -> adds items at the end of a list
+**extend() -> adds multiple items at the end of a list using a list (pass a list)
+**insert() -> adds an item at a specific index
+
+Removing items from a list
+**remove() -> removes an item by value
+**pop() -> removes an item at a specified index
+        -> if no index has been specifies it removes the last value    
+**clear() -> removes everything from the list
+
+Task 
+1.count() -> counts the number of elements with the specified value.
+2.index() -> returns the index of the first element with the the value passed.
+3.sort() -> arranges a list in alphanumeric and ascending.
+4.reverse() -> changes the order of the list from the last item to the first.
+5.max() -> returns the largest value in a dataset
+6.min() -> returs the smallest value in a dataset
+7.copy() -> returns a copy of the list
+ **use either the copy method, list keyword or the slice [:] operator.
+8.how to join 2 lists(hint: 2methods)
+ -> use append whereby you add the items in the second list to the original by looping
+  (for x in list1:
+   list2.append(x))
+ -> use + operator 
+ -> use extend() to add the list to the end of the other list
+
+9.slide task 35
+
+Tuples
+data structures used to hold multiple values that can't be changed or removed.
+Denoted using normal brackets.()
+
+**properties / characteristics of tuples
+-> are ordered --> uses index to access/order items
+-> are immutable --> values can't be changed
+-> can hold multiple values of any type
+
+TASK
+1. How to update a tuple 
+ -> adding / removing / changing items in a tuple.
+2. task slide 38
+
+SETS
+a collection of unique, unordered items.
+-Represented using curly braces -{}
+ 
+ Properties of sets
+ -they are unordered -> don't have indexing
+ -their values are unique -> no duplicate values
+ -
+ 
+
+
+
+
+
