@@ -256,8 +256,23 @@ a collection of unique, unordered items.
  Properties of sets
  -they are unordered -> don't have indexing
  -their values are unique -> no duplicate values
- -
- 
+ -they are mutable
+
+ **Set operations*
+ 1. Access items in a set.
+ ->use inclusivity that is in
+ ->converting it into a list
+
+ 2. Adding items in a set
+ -> add a single item (add) ##ADDS ANYWHERE AT ANY POSITION
+ -> use (update) which adds multiple items using a list still at any random point
+
+ 3. Removing items from a set
+ remove() -> pass the item to be removed
+   =<if item doesn't exist it throws an error>
+ discade() -> pass item to be removed but if it doesn't exist no error
+ clear() -> clears the entire set
+
 
 
 
