@@ -273,6 +273,53 @@ a collection of unique, unordered items.
  discade() -> pass item to be removed but if it doesn't exist no error
  clear() -> clears the entire set
 
+ DICTIONARIES
+ A collection of key-value pairs
+ ---> also represented using curly braces {}
+
+ => *key* - what we use to access values in a dictionary
+ => *value* - actual data being stored (attached to a key)
+            - accessed using keys
+
+      KEYS
+ --< are used to access values in a dictionary>
+  --> are immutable
+  --> they must be strings
+  --< they are unique and case sensitive>(**no duplicate keys*)
+  --> key-value pairs are comma separated   
+
+   **difference btn the two above*
+
+      VALUES
+   ---< accessed using keys>
+   ---> can be of any data-type
+
+   DICTIONARY OPERATIONS
+   1. accssing values in a dictionary
+    --< use bracket notation>
+    --< use get>
+
+   2. adding and updating values in a dictionary
+    my_dict[key] = value 
+    --use update (my_dict.update({'key':'value'})) //multiple items
+
+   3. removing items from a dict
+    -pop('key') //if no values are passed it removes the last item.
+    -popitem() removes the last inserted item
+    -clear() //empties the dictionary
+
+   4. .keys() **returns all keys in a dictionary*
+   5. values() **returns all values in a dictionary*
+   6. .items() **returns key-value pairs*
+
+   Task Slide 40 && 43
+
+
+
+
+
+
+
 
 
 
