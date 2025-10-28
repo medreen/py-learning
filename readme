@@ -314,8 +314,55 @@ a collection of unique, unordered items.
 
    Task Slide 40 && 43
 
+   **STRINGS**
+   -slicing and stepping
+   slicing => taking a potion of the original string using indexing.
+   stepping => enables you to skip over values while slicing
+    --> reversing a string
+      ([::-1])
+      to skip you can change the negative one value to the number of steps
+
+ Homogenous data structure hold items of same data types
+ Heterogenous data structures hold items of same data types
 
 
+**OPERATORS**
+are symbols that help us use different functions.
+
+1. Arithmeetic operators 
+-addition operator
+-subtraction operator
+-division operator
+-multiplication operator
+-exponentiation operator
+-floor division operator
+
+2. Assignment operator 
+ used to assign values
+ (=) -> x = 5
+ (+=) -> add add assign
+ (-=) -> subtract and assing
+ (/=) -> divide and assign
+ (*=) -> multiply and assign
+
+3. Comparison operator
+  -compare values
+  --> returns boolean
+  (==) means equal to (equality operator)
+  (!=) means not equal to 
+  (<=) greater than or equal to
+  (>=) less than or equal to
+  (<) greater than
+  (>) less than
+  
+
+4. Logical operator
+used to combine conditions
+ -and ---< returns true only if all conditions are true>
+ -or ---< returns true if atleast one condition is true>
+ -not --< reverses the truth>
+
+Task
 
 
 
