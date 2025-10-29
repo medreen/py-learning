@@ -435,8 +435,18 @@ Print the following
 5.Copy user key-value pair to another variable / dictionary using .copy() method
 
 
+CONDITIONAL STATEMENTS
+-structures that enable a program to make decisions.
+-The program gets to make a decision based on pre-set conditions or rules
 
+if statements
+syntax   if condition
+            line of code to be executed if condition is met
+         else:
+            if condition is not met   
 
+TASK
+Slide 56 and 57, 58
 
 
 
