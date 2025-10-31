@@ -11,9 +11,9 @@ else:
 my_var = 9038
 
 if isinstance(my_var, str):
-    print('String Detected..')
+    print('String Detected.')
 elif isinstance(my_var, int):
-    print('Integer Detected')
+    print('Integer Detected.')
 else:
     print('Unknown Type.')
 
@@ -23,20 +23,29 @@ y = 14
 
 if y % 2 == 0:
     if x % 2 == 0:
-        print(f'Both {y} and {x} are equal.') 
+        print(f'Both {y} and {x} are even.') 
     else:
-        print(f'Only {y} is an even number.')
+        print(f'Only {x} is an even number.')
 else:
-    print(f'Neither {x} or {y} are even.')
+     if y % 2 == 0:
+        print(f'Only {y} is even.') 
+     else:        
+        print(f'Neither {x} or {y} are even.')
 
 #loops
-for x in range(51):
-    print(x, end=", " )
+loop1 = []
+for x in range(1, 51):
+    loop1.append(x)
+
+print(loop1)
 
 #2
-for x in range(51):
+lst2 = []
+
+for x in loop1:
     if x % 7 == 0 or x % 5 == 0:
-        print(f'Either divisible by 7 or 5: {x}')
+        lst2.append(x)
+print(lst2)
     
 #3
 sum = 0
@@ -50,8 +59,8 @@ print(average)
 
 #4
 lst = []
-for x in range(51):
-    if x % 2 != 0:
+for x in range(10, 51):
+    if x % 2 != 0 and len(lst) < 10:
         lst.append(x)
 print(lst)
 
