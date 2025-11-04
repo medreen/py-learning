@@ -454,10 +454,43 @@ LOOPS
 *Nested Loops*
 --> A loop within another loop.
 
+**task*
+8, 9, 10, 11, 14 with functions
+
 Task: slide 65
 
 
+FUNCTIONS
+-a reusable block of code
+-we use functions for:
+ 1. reusability of code
+ 2. code organization
+ 3. modularity
+ 4. better readability
+ 5. better debugging
+ 6. scalability of code
 
+ SYNTAX==>
+ def function_name():
+    //function_body
 
+**all python functions end in () e.g print(), len(), .isdigit()
+
+--> function definition => defined the function, the function name e.t.c
+--> function body => the block of code to be executed (should be indented as the python syntax)
+--> function call => we use the return keyword, the value is stored such that when the value is called
+    it returns the stored value
+
+VARIABLE SCOPES
+Scope => defines the accessibility of a variable
+
+Local scope -> a variable that is accessible within a defined block(local scope)
+Global scope -> a variable that is accessible through out the entire code(global scope)
+
+**Parameters and Arguments*
+--> parameters are temporary varibales that help the code to become reusable
+
+--> arguments are real values
+qs 1, 2, 5 and slide 70 using functions.
 
 
