@@ -1,12 +1,17 @@
-speed = int(input('Enter the car speed(km/hr): '))
-demerit_point = 0
-
+speed = float(input("Enter speed: "))
+speed_limit = 70
 
 if speed < 70:
-    print('Ok')
-elif speed > 70:
-    
-    for 5 in range(speed - 70):
-        demerit_point = demerit_point + 1
-        print(demerit_point)
+    print("OK")
+else:
+    speed_exceeded = speed - speed_limit
+    demerit_points = speed_exceeded // 5
+
+    if speed_exceeded%5 != 0:
+        demerit_points += 1
+    if demerit_points > 12:
+        print(f"Demerit points -> {demerit_points}")
+        print("License suspended")
+    else:
+        print(f"Demerit points -> {demerit_points}")
 
