@@ -465,7 +465,7 @@ FUNCTIONS
 -we use functions for:
  1. reusability of code
  2. code organization
- 3. modularity
+ 3. modularity -> breaking large piece of code into smaller parts.
  4. better readability
  5. better debugging
  6. scalability of code
@@ -493,4 +493,6 @@ Global scope -> a variable that is accessible through out the entire code(global
 --> arguments are real values
 qs 1, 2, 5 and slide 70 using functions.
 
+
+qs 15 - 20 using functions
 
