@@ -10,23 +10,25 @@ print(revr)
 
 lst = [1, 2, 3, 4, 5, 6]
 
-def get_even(lst):
-    for i in lst:        
+def get_even(list1):
+    results = []
+    for i in list1:        
         if i % 2 == 0:
-            return f'{i} is an even number.'
+            return results.append[i]
         else:
-            return f'{i} is an odd number.'
+            return results.append[i]
         
+    return results
 
 evn = get_even(lst)
 print(evn)
 
 square = []
 def get_squares():
-    for i in range(1, 30):
-        x = i ** 2
+    for j in range(1, 30):
+        x = j ** 2
         square.append(x)
-        return square
+    return square
 
 sqr = get_squares()
 print(sqr)
