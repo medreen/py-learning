@@ -1,4 +1,4 @@
-#bank
+#bank 
 import datetime
 accounts = []
 
@@ -71,13 +71,6 @@ def create_account(user_id, username, password, amount, age, phone_number, email
 
     return user
 
-user = create_account(user_id, user_name, password, amount, age, phone_number, email)
-print(user)
-
-#update account
-accounts.append(user)
-print(accounts)
-
 #log in
 def log_in(username, password):
     if username == user_name and password == password:
@@ -86,9 +79,6 @@ def log_in(username, password):
         message = "Would you like to create an account?"
 
     return message
-
-log_in = log_in('medreen', 'password')
-print(log_in)
 
 #deposit
 def deposit(u_id, amount):
@@ -100,10 +90,7 @@ def deposit(u_id, amount):
 
     return message
 
-deposit_total_amount = deposit(user_id, 1000)
-print(deposit_total_amount)
-
-#withdraw
+#withdraw amount
 def withdraw(u_id, amount):
     if u_id == user_id:
         user['amount'] = user['amount'] - amount
@@ -111,9 +98,6 @@ def withdraw(u_id, amount):
     else:
         print('User not found')
     return message
-
-withdraw_total_amount = withdraw(user_id, 100)
-print(withdraw_total_amount)
 
 #check balance
 def check_balance(u_id):
@@ -124,9 +108,7 @@ def check_balance(u_id):
 
     return f'Balance is ksh.{balance}'
 
-balance = check_balance(user_id)
-print(balance)
-
+#delete account
 def delete_account(u_id):
     if u_id == user_id:
         message = f'User {u_id}\'s account has been deleted.'
@@ -136,13 +118,22 @@ def delete_account(u_id):
     
     return message
 
+#function calls
+user = create_account(user_id, user_name, password, amount, age, phone_number, email)
+log_in = log_in('medreen', 'password')
+accounts.append(user) #update account
+deposit_total_amount = deposit(user_id, 1000)
+withdraw_total_amount = withdraw(user_id, 100)
+balance = check_balance(user_id)
 del_account = delete_account(user_id)
+
+#test
+print(user)
+print(log_in)
+print(accounts)
+print(deposit_total_amount)
+print(balance)
 print(del_account)
-
-
-
-
-
 
 
 

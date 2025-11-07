@@ -4,7 +4,7 @@ gross_salary = basic_salary + benefits
 nhif = 0
 nssf = 0
 
-if gross_salary <= 5999:
+if gross_salary >0 and gross_salary <= 5999:
     nhif += 150
 elif gross_salary <= 7999 and gross_salary >= 6000:
     nhif += 300
@@ -52,23 +52,20 @@ nhdf = gross_salary * 0.015
 taxable_income = gross_salary - (nssf + nhdf + nhif)
 
 #19
-total_paye = 0
+
 relief = 2400
+if taxable_income >= 0 and taxable_income <= 24000:
+    paye = taxable_income * 0.1
+elif taxable_income >24000 and  taxable_income <= 32333:
+    paye = (24000 * 0.1) + (taxable_income - 24000) * 0.25
+elif taxable_income >= 32333 and taxable_income <= 500000:
+    paye = (24000 * 0.1) + (8333 * 0.25) + (taxable_income - 32333) * 0.30
+elif taxable_income >= 500000 and  taxable_income <= 800000: #24000 + 8333 + 467467 + 300000
+    paye = 24000 * 0.1 + 8333 * 0.25 + 467667 * 0.3 + (taxable_income - 500000) * 0.325
+else: #24000 + 8333 + 467467 + 300000 + 800000
+    paye = paye = 24000 * 0.1 + 8333 * 0.25 + 467667 * 0.3 + taxable_income - 800000 * 0.35
 
-if taxable_income >= 24000:
-    total_paye += 0.1 * 24000
-elif taxable_income >= (24000 + 8333):
-    total_paye += 0.25 * 8333
-elif taxable_income >= (24000 + 8333 + 467667):
-    total_paye += 0.3 * 467667
-elif taxable_income >= (24000 + 8333 + 467667 + 300000):
-    total_paye += 0.325 * 300000
-elif taxable_income >= 800000:
-    total_paye += 0.35 * 800000
-else:
-    total_paye = 0
-
-payee = total_paye - relief
+payee = paye - relief
 net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
 
 print(f'Gross Salary: {gross_salary}')
