@@ -1,5 +1,4 @@
-#A function that can create an account
-#user name and 
+#bank
 import datetime
 accounts = []
 
@@ -44,7 +43,7 @@ while True:
 #checking email validity
 while True:
     email = input('Enter email: ')
-    if "@" in email and email.count("@") == 1 and len(email) >= 8:
+    if "@" in email and ".com" in email and email.count("@") == 1 and len(email) >= 8:
         print('Email is valid.')
         break
     else:
@@ -62,6 +61,7 @@ def create_account(user_id, username, password, amount, age, phone_number, email
         "userid" : user_id,
         "username" : username,
         "password" : password,
+        "amount" : amount,
         "age" : age,
         "phone" : phone_number,
         "email" : email,
@@ -77,6 +77,74 @@ print(user)
 #update account
 accounts.append(user)
 print(accounts)
+
+#log in
+def log_in(username, password):
+    if username == user_name and password == password:
+        message = "Logged in!"
+    else:
+        message = "Would you like to create an account?"
+
+    return message
+
+log_in = log_in('medreen', 'password')
+print(log_in)
+
+#deposit
+def deposit(u_id, amount):
+    if u_id == user_id:
+        user['amount'] = user['amount'] + amount
+        message = f'Deposited amount is ksh.{amount}'        
+    else:
+        message = 'User not found!'
+
+    return message
+
+deposit_total_amount = deposit(user_id, 1000)
+print(deposit_total_amount)
+
+#withdraw
+def withdraw(u_id, amount):
+    if u_id == user_id:
+        user['amount'] = user['amount'] - amount
+        message = f'Withdrawn amount is ksh.{amount}'       
+    else:
+        print('User not found')
+    return message
+
+withdraw_total_amount = withdraw(user_id, 100)
+print(withdraw_total_amount)
+
+#check balance
+def check_balance(u_id):
+    if u_id == user_id:
+        balance = user["amount"]        
+    else:
+        balance = 'NULL'
+
+    return f'Balance is ksh.{balance}'
+
+balance = check_balance(user_id)
+print(balance)
+
+def delete_account(u_id):
+    if u_id == user_id:
+        message = f'User {u_id}\'s account has been deleted.'
+        user.clear()
+    else:
+        message = 'User not found'
+    
+    return message
+
+del_account = delete_account(user_id)
+print(del_account)
+
+
+
+
+
+
+
 
     
 
